@@ -1,0 +1,16 @@
+* { box-sizing: border-box; margin: 0; }
+body { font-family: system-ui, sans-serif; line-height: 1.4; overflow-x: hidden; }
+
+section { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.hero { background: #111; color: #fff; flex-direction: column; gap: 2rem; }
+.hero h1 { font-size: 4rem; opacity: 0; transform: translateY(60px); }
+
+.gallery { position: relative; }
+.gallery img { width: 40vw; border-radius: 12px; }
+.gallery .caption { position: absolute; bottom: 10%; left: 8%; font-size: 2rem; color: #fff; opacity: 0; }
+
+.cards { background:#f3f4f6; gap:2rem; }
+.card { width: 260px; height: 320px; border-radius:20px; background:#fff;
+  box-shadow:0 8px 16px rgba(0,0,0,.1); display:flex; align-items:center; justify-content:center;
+  font-size:1.5rem; transform:translateX(120%); }
