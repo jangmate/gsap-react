@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: url("public/images/Dirty_Worker_Karina4.webp");
+  background: url("/images/Dirty_Worker_Karina4.webp");
   background-size: cover;
   transform: translateZ(50px);
 }
@@ -41,7 +41,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: url("public/images/Dirty_Worker_Karina1.webp");
+  background: url("/images/Dirty_Worker_Karina1.webp");
   background-size: cover;
 }
 .book-left-side {
