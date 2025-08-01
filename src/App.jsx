@@ -6,46 +6,26 @@ import SubLayout from "./layouts/SubLayout.jsx";
 import Book from "./pages/gsap/Book.jsx";
 import Error from "./error/Error.jsx";
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <MainLayout />,
-        errorElement: <Error />,
-        children: [
-            { index: true, element: <Home /> },
-        ],
-    },
-    {
-        path: "/gsap",
-        element: <SubLayout />,
-        errorElement: <Error />,
-        children: [
-            { index: true, element: <Book /> },
-            // { path: "gsap/intro", element: <Intro /> },
-            // { path: "gsap/history", element: <History /> },
-            // { path: "gsap/organization", element: <Organization /> },
-        ],
-    },
-    // {
-    //     path: "/sass",
-    //     element: <SubLayout />,
-    //     children: [
-    //         { index: true, element: <Home /> },
-    //         { path: "gsap/intro", element: <Intro /> },
-    //         { path: "gsap/history", element: <History /> },
-    //         { path: "gsap/organization", element: <Organization /> },
-    //     ],
-    // },
-    // {
-    //   path: "/portfolio",
-    //   element: <PortfolioLayout />,
-    //   errorElement: <Error />,
-    //   children: [
-    //     { path: 'portfolio', element: <Portfolio />},
-    //     { path: 'portfolioView/:boardSeq', element: <PortfolioView />}
-    //   ]
-    // }
-]);
+const basename = process.env.NODE_ENV === "production" ? "/gsap-react" : "";
+
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <MainLayout />,
+            errorElement: <Error />,
+            children: [{ index: true, element: <Home /> }],
+        },
+        {
+            path: "/gsap",
+            element: <SubLayout />,
+            errorElement: <Error />,
+            children: [{ index: true, element: <Book /> }],
+        },
+    ],
+    { basename }  // ← 여기 변수 사용
+);
+
 
 function App() {
     return (
